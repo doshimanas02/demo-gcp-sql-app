@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Form</title>
+</head>
+<body>
+  <form th:action="@{/save_book}" th:object="${book}" method="post">
+      <p>Enter Name: <input type="text" th:field="*{name}" /></p>
+      <p>Enter ISBN: <input type="number" th:field="*{ISBN}" /></p>
+      <select name="author_id">
+          <option th:each="data:${authors}"
+                  th:value="${data.id}" th:text="${data.firstName + ' ' + data.lastName}">
+          </option>
+      </select>
+      <select name="publisher_id">
+          <option th:each="data:${publishers}"
+                  th:value="${data.id}" th:text="${data.name}">
+          </option>
+      </select>
+      <p><input type="submit" value="submit" /></p>
+  </form>
+</body>
+</html>

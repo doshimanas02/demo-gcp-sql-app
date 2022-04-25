@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Author Form</title>
+</head>
+<body>
+  <form th:action="@{/save_author}" th:object="${author}" method="post">
+      <p>Enter First Name: <input type="text" th:field="*{firstName}" /></p>
+      <p>Enter Last Name: <input type="text" th:field="*{lastName}" /></p>
+      <p><input type="submit" value="submit" /></p>
+  </form>
+</body>
+</html>

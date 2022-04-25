@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Publisher Form</title>
+</head>
+<body>
+  <form th:action="@{/save_publisher}" th:object="${publisher}" method="post">
+      <p>Enter Name: <input type="text" th:field="*{name}" /></p>
+      <p>Enter Address: <input type="text" th:field="*{addressLine1}" /></p>
+      <p>Enter City: <input type="text" th:field="*{city}" /></p>
+      <p>Enter State: <input type="text" th:field="*{state}" /></p>
+      <p>Enter Zip: <input type="text" th:field="*{Zip}" /></p>
+      <p><input type="submit" value="submit" /></p>
+  </form>
+</body>
+</html>

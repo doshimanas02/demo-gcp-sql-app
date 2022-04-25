@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>A List of Publishers</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+  </tr>
+  <tr th:each="publisher : ${publishers}">
+    <td th:text="${publisher.id}">123</td>
+    <td th:text="${publisher.name}">Hello World</td>
+    <td th:text="${publisher.addressLine1}">Hello World</td>
+    <td th:text="${publisher.city}">Warsaw</td>
+    <td th:text="${publisher.state}">Warsaw</td>
+    <td th:text="${publisher.zip}">Warsaw</td>
+  </tr>
+  <tr>
+    <td colspan="6">
+      <button type="button" th:onclick="|window.location.href='/publisher_form'|">
+        Add Publisher
+      </button>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

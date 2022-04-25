@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>A List of Books</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Publisher</th>
+        </tr>
+
+        <tr th:each="book : ${books}">
+            <td th:text="${book.id}">123</td>
+            <td th:text="${book.name}">Hello World</td>
+            <td th:text="${book.publisher.name}">Warsaw</td>
+        </tr>
+        <td colspan="3">
+            <button type="button" th:onclick="|window.location.href='/book_form'|">
+                Add Book
+            </button>
+        </td>
+    </table>
+</body>
+</html>

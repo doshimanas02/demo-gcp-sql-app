@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Spring Web App</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 800px;
+            background-color: #f1f1f1;
+            border: 1px solid #555;
+        }
+
+        li {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        button {
+            display: inline-block;
+            font-family: 'Lato','Arial',sans-serif;
+            font-weight: 300;
+            border-radius: 200px;
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+
+        li {
+            text-align: center;
+            border-bottom: 1px solid #555;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Demo Spring Web App with GCP Cloud SQL Integration</h1>
+    <ul>
+        <li>
+            <button type="button" th:onclick="|window.location.href='/author_form'|">
+                Add Author
+            </button>
+        </li>
+        <li>
+            <button type="button" th:onclick="|window.location.href='/publisher_form'|">
+                Add Publisher
+            </button>
+        </li>
+        <li>
+            <button type="button" th:onclick="|window.location.href='/book_form'|">
+                Add Book
+            </button>
+        </li>
+        <li>
+            <button type="button" th:onclick="|window.location.href='/authors'|">
+                Show Authors
+            </button>
+        </li>
+        <li>
+            <button type="button" th:onclick="|window.location.href='/publishers'|">
+                Show Publishers
+            </button>
+        </li>
+        <li>
+            <button type="button" th:onclick="|window.location.href='/publishers'|">
+                Show Books
+            </button>
+        </li>
+    </ul>
+</center>
+</body>
+</html>
